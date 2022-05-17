@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Alege un buton</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <style>
+    body {
+        background-color: #C8E5EC;
+        font-family: Verdana;
+        text-align: center;
+        margin-top: 100px;
+        animation: fadeInAnimation ease 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+    }
+    button {
+        background-color: light-gray;
+        padding: 15px 21px;
+        border-radius: 50%;
+        border: 0px;
+        font-size: 15px;
+        margin-left: 7px;
+        margin-right: 7px;
+        transition-duration: 0.5s;
+        color: #303030;
+    }
+    button:hover {
+        background-color: #303030;
+        color: white;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+  </style>
+</head>
+<body style="color:#303030">
+
+<form action="/answer" object="answer" method="POST">
+  <div>
+    <label><h3>Alege un buton</h3></label>
+    <br>
+    <button name="value" th:value=${buton1}>Butonul 1</button>
+    <button name="value" th:value=${buton2}>Butonul 2</button>
+    <button name="value" th:value=${buton3}>Butonul 3</button>
+  </div>
+</form>
+
+</body>
+</html>
